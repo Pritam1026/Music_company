@@ -2,10 +2,6 @@
 -----------------------------------------------
 --USERS TABLE--
 -----------------------------------------------
-ALTER TABLE users
-ADD state varchar(30)
---State is added in this table to fill the users state which was not not present in initial schema.
-
 INSERT INTO users(user_name,password,mobile_number,email,name,state)
 VALUES
 ('Pritam1026','pritam@123',9765495616,'pritam123@gmail.com','Pritam','Bihar'),
@@ -18,18 +14,11 @@ VALUES
 ('Renukaengg','Renukajain@584641',9789569515,'renuka983@gmail.com','Renuka','Uttarpradesh'),
 ('Saurabhlucifer','Saurabhju@1123',8814694697,'saurabhwork1@gmail.com','Saurabh','Gujarat'),
 ('Deepaktufan','tufandeep@111222',7898659522,'tufandeep112@gmail.com','Deepak','Delhi')
---users data is randomly generated.
+--10 user data is randomly generated.These data are fake and donot have real world significance.
 
 -----------------------------------------------
 --USER_CARD TABLE--
 -----------------------------------------------
---Name of bank and card type is added in the table.
-ALTER TABLE user_card
-ADD bank text;
-
-ALTER TABLE user_card
-ADD card_type text;
-
 INSERT INTO user_card(card_number,user_name,exp_date,bank,card_type)
 VALUES
 (6494141498189415,'Pritam1026','27-11-2026','HDFC','credit'),
@@ -52,13 +41,12 @@ VALUES
 (3985451269983155,'Ronakstarboy','18-11-2025','HDFC','debit'),
 (8694327844522414,'Ankita_dust','17-12-2026','ICICI','credit')
 --users data is randomly generated.
+--These data are fake and donot have real world significance.
+--The relation between user and user_card is one to many.
+--A single user_name can have multiple cards.
 -----------------------------------------------
 --PAYMENTS TABLE--
 -----------------------------------------------
-ALTER TABLE payments
-DROP user_name
---Dropped username as there is unque connection between card_number and user_name.
-
 INSERT INTO payments(amount,date_of_pay,card_number)
 VALUES
 (200,'02-01-2021',4989484894649494),
@@ -138,37 +126,69 @@ VALUES
 (500,'22-05-2022',2393080627101694),
 (350,'26-05-2022',5503679872654724),
 (500,'30-05-2022',2393080627101694)
---payments data is fake.just for project purpose.
+--payments data is randomly generated
+--These data are fake and donot have real world significance.
+--relation between user_card and payments is one to many. that means a payment which is successfully commited
+--is done by a single card only.
 -----------------------------------------------
 --SONGS TABLE--
 -----------------------------------------------
-
-ALTER TABLE songs
-ALTER COLUMN song_name TYPE text
-
-ALTER TABLE songs
-ALTER COLUMN movie_album TYPE text
-
---Two columns datatypes are modified for importing data.
-
-SELECT *
-FROM songs
-
---Singer data is fetched and modified from Kaggle
+--songs data is fetched and modified from Kaggle
+--To know about the modication methods please read readme.md
 --url:"https://www.kaggle.com/datasets/makvel/hindi-film-music-kishor-kumar-1-to-300-songs"
-
+--This dataset contains the songs of legendry singer Kishor kumar
+--import method of PGADMIN is used to import the data into database.
 -----------------------------------------------
 --SINGER TABLE--
 -----------------------------------------------
---IMPORTED FROM CSV
-
+--Singer data is fetched and modified from Kaggle
+--To know about the modication methods please read readme.md
+--url:"https://www.kaggle.com/datasets/makvel/hindi-film-music-kishor-kumar-1-to-300-songs"
+--import method of PGADMIN is used to import the data into database.
 -----------------------------------------------
 --SONG_SINGER TABLE--
 -----------------------------------------------
---This table connects the songs with thier singers.
-
---IMPORT FROM CSV
-
+--Songs_singer data is fetched and modified from Kaggle
+--To know about the modication methods please read readme.md
+--url:"https://www.kaggle.com/datasets/makvel/hindi-film-music-kishor-kumar-1-to-300-songs"
+--import method of PGADMIN is used to import the data into database.
+--The relation between songs and singer tables is many to many relation.
 -----------------------------------------------
---MUSIC_COMPANY_TABLE--
+--MUSIC_DIRECTOR_TABLE--
 -----------------------------------------------
+--Songs_singer data is fetched and modified from Kaggle
+--To know about the modication methods please read readme.md
+--url:"https://www.kaggle.com/datasets/makvel/hindi-film-music-kishor-kumar-1-to-300-songs"
+--import method of PGADMIN is used to import the data into database.
+-----------------------------------------------
+--MUSIC_DIRECTOR_SONGS TABLE--
+-----------------------------------------------
+--Songs_singer data is fetched and modified from Kaggle
+--To know about the modication methods please read readme.md
+--url:"https://www.kaggle.com/datasets/makvel/hindi-film-music-kishor-kumar-1-to-300-songs"
+--import method of PGADMIN is used to import the data into database.
+--The relation between music director and songs tables is many to many relation.
+-----------------------------------------------
+--PLAYLIST TABLE--
+-----------------------------------------------
+--playlist data is randomly generated using excel
+--These data are fake and donot have real world significance.
+-----------------------------------------------
+--PLAYLIST_SONGS TABLE--
+-----------------------------------------------
+--The relation between playlist and songs is many to many
+--The data is generated using excel and import using impport method of PGADMIN
+-----------------------------------------------
+--USER_PLAYLISTS TABLE--
+-----------------------------------------------
+--The relation between user and playlist is one to many.
+--The data is generated using excel and import using impport method of PGADMIN
+
+
+
+
+
+
+
+
+
