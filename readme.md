@@ -3,7 +3,7 @@
 ### [Kaggle Link](https://www.kaggle.com/datasets/makvel/hindi-film-music-kishor-kumar-1-to-300-songs)
 ---
 The database contains 12 tables   
-- Users
+- users
 - user_card
 - payments
 - songs
