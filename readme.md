@@ -22,3 +22,7 @@ To understand the relation between entities please look ERD
 
 ![ERD](https://user-images.githubusercontent.com/120086878/206711008-8405bc66-086c-4088-982e-4f2f1fd1ff6f.PNG)
 ---
+QUERIES
+---
+## I have added 10 example queries on the database which can be found in queries.sql file.
+---
