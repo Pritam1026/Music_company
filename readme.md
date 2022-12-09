@@ -17,6 +17,7 @@ The database contains 12 tables
 - user playlist
 ---
 
-To understand the relation between entities please load
+To understand the relation between entities please look ERD
+![ERD] (https://github.com/Pritam1026/Music_company/blob/main/IMAGES/ERD.PNG)
 
 
