@@ -24,5 +24,5 @@ To understand the relation between entities please look ERD
 ---
 QUERIES
 ---
-## I have added 10 example queries on the database which can be found in queries.sql file.
+### I have added 10 example queries on the database which can be found in queries.sql file.
 ---
