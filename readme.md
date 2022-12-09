@@ -1,5 +1,6 @@
 # MUSIC COMPANY DATABASE
 ### This project contains the database for music company.Which is created using Postgresql. The data is taken from kaggle and some are genrated using excel that contains data of 300 kishor kumar songs.
+To create data in excel function like unique and randbwteen are used.
 ### [Kaggle Link](https://www.kaggle.com/datasets/makvel/hindi-film-music-kishor-kumar-1-to-300-songs)
 ---
 The database contains 12 tables   
